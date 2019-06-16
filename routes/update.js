@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
 router.post('/', function(req, res) {
     var currentId = req.session.user._id
     var id = currentId
-    console.log(currentId)
+    //console.log(currentId)
     
     User.findOne({_id: id}, function (err, user) {
         if (err) {
