@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var bcryptjs = require("bcryptjs")
-var User = require('../models/user.js');
+var User = require('../models/user.js')
 
 // Validation
 //Get "/login"
