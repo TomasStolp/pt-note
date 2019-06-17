@@ -26,14 +26,14 @@ var removeUser = require("./routes/remove-user.js")
 var profile = require("./routes/profile.js")
 var deleteUser = require("./routes/delete-user.js")
 
+const url = process.env.MONGODB_URI;
 
 //Linking mongoose to MongoDB Database called "MotoMatch"
-// mongoose.connect('mongodb://' + "localhost" + '/' + "MotoMatch", {
-//   useNewUrlParser: true
-// })
+mongoose.connect(url, {
+  useNewUrlParser: true 
+})
 
-  const url = process.env.MONGODB_URI;
-
+wefwefwef
 express()
   .use(express.static("static"))
   .use(bodyParser.urlencoded({
