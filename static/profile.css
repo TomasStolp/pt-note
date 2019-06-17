@@ -1,0 +1,19 @@
+p, h1, h2{
+    text-align: center
+}
+img{
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.profilepic{
+    background-color: #ea694e;
+    padding: 10px;
+}
+
+i{
+    color: #6868aa;
+    position: relative;
+    left: 270;
+}

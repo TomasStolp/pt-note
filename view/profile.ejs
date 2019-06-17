@@ -11,6 +11,13 @@
 </div>
 <% } %>
 <h1><%= currentUser.firstName%> <%= currentUser.lastName%></h1>
+<a href="/update">Update your profile</a>
+<form method="get" action="/signout">
+    <button>Logout</button>
+</form>
+<form action="/users/delete" method="get">
+    <button class="deleteProfile" type="submit">Delete account</button>
+</form>
 <p><%= currentUser.userName%></p>
 <p><%= currentUser.genres%></p>
 <h2>Description</h2>

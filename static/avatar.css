@@ -1,0 +1,48 @@
+body {
+    font-family: roboto;
+}
+
+main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    background-color: rgb(243, 126, 126);
+    padding: 3em;
+    border-radius: .5em;
+}
+
+h1{
+    
+}
+
+#radio {
+    display: flex;
+}
+
+input {
+    display: block;
+    margin-bottom: 1em;
+    
+}
+
+label {
+    margin-right: 1em;
+}
+
+form a {
+    background-color: white;
+    padding: 1em;
+    border-radius: .5em;
+    margin-top: 1em;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+form a:visited {
+    background-color: white;
+    padding: 1em;
+    border-radius: .5em;
+    margin-top: 1em;
+    color: black;
+
+}

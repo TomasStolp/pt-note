@@ -23,6 +23,7 @@ var signout = require("./routes/signout.js")
 var removeUser = require("./routes/remove-user.js")
 var profile = require("./routes/profile.js")
 var deleteUser = require("./routes/delete-user.js")
+var avatar = require("./routes/avatar.js")
 
 
 //Linking mongoose to MongoDB Database called "MotoMatch"
@@ -61,6 +62,7 @@ express()
   .use("/users/delete/:id", removeUser)
   .use("/profile", profile)
   .use("/users/delete", deleteUser)
+  .use("/avatar", avatar)
 
 
   //Listen on the defined port

@@ -11,7 +11,8 @@ var userSchema = new Schema({
     },
     password: String,
     genres: Array,
-    profilePicture: String
+    profilePicture: String,
+    bike: String
   })
 
  module.exports = mongoose.model("users", userSchema)

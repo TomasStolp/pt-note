@@ -3,6 +3,7 @@ $(document).ready(function(){
     $(".deleteProfile").on("click", deleteUser)
 })
 
+
 function deleteProfile(){
     alert("Are you sure?")
 }

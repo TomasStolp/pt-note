@@ -70,6 +70,7 @@ router.post('/', function (req, res) {
               newuser.lastName = lastName
               newuser.userName = emailaddress
               newuser.password = hash
+              newuser.bike = ""
               // if(genres.length <= 1){
                 console.log(genres + " " + typeof Object.keys(genres))
                 genres.forEach(function(elem){

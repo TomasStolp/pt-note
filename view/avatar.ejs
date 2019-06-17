@@ -1,0 +1,38 @@
+<% include partials/header %>
+<head>
+          <link rel="stylesheet" type="text/css" href="/avatar.css">
+</head>
+<main>
+<h1>Your avatar</h1>
+<p hidden id="currentbike">"<%= currentUser.bike %>"</p>
+<div id="canvasDiv"></div>
+
+<form action="/avatar" method="post">
+     <h2> What kind of bike do you ride?</h2>
+     <section id="radio">
+     <label>Sport
+          <input id="sport" type="radio" name="bike" value="sport">
+     </label>
+
+     <label>Retro
+          <input id="retro" type="radio" name="bike" value="retro">
+     </label>
+
+     <label>Dirt
+          <input id="dirt" type="radio" name="bike" value="dirt">
+     </label>
+     </section>
+     
+     <h2>What color helmet do you wear?</h2>
+     <!-- <label>bike<input type="text" name=bike></label> -->
+
+<!-- <button>Submit</button> -->
+<a href="#">Submit</a>
+
+</form>
+</main>
+<script type="text/javascript" src="avatar.js"></script>
+<script type="text/javascript">
+     prepareCanvas(document.getElementById("canvasDiv"), 490, 220);
+</script>
+<% include partials/footer %>
