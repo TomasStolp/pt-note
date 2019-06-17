@@ -1,0 +1,23 @@
+<% include partials/header %>
+<head>
+        <link rel="stylesheet" type="text/css" href="/profile.css">
+    </head>
+<body>
+<main>
+<%if (currentUser.profilePicture) { %>
+<div class="profilepic">
+<img src=<%= currentUser.profilePicture %> name="profilePicture">
+<a><i class="fas fa-edit"></i></a>
+</div>
+<% } %>
+<h1><%= currentUser.firstName%> <%= currentUser.lastName%></h1>
+<p><%= currentUser.userName%></p>
+<p><%= currentUser.genres%></p>
+<h2>Description</h2>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+Aenean commodo ligula eget dolor. Aenean massa. </p>
+
+</main>
+<% include partials/footer %>
+
+
