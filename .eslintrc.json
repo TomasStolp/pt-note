@@ -2,6 +2,10 @@
     "parserOptions": {
         "ecmaVersion": 2018,
     },
+     "env": {
+    "es5": true,
+    "node": true
+  },
     "rules": {
         "semi": "error",
         "camelcase":"error",
