@@ -12,7 +12,11 @@
 <% } %>
 <h1><%= currentUser.firstName%> <%= currentUser.lastName%></h1>
 <p><%= currentUser.userName%></p>
-<p><%= currentUser.genres%></p>
+<%if(currentUser.genres !== 'undefined'){%>
+    <%currentUser.genres.forEach(function(elem){%>
+    <li><%= elem _%></li>
+    <%})%>
+<%}%>
 <h2>Description</h2>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
 Aenean commodo ligula eget dolor. Aenean massa. </p>
