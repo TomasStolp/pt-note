@@ -1,0 +1,11 @@
+{
+    "name": "Note",
+    "short_name": "Note",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "Scope": "/",
+    "start_url": "/",
+    "splash_pages": null
+  }
