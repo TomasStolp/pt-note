@@ -1,8 +1,5 @@
 <% include partials/header %>
-<head>
-        <link rel="stylesheet" type="text/css" href="/profile.css">
-    </head>
-<body>
+
 <main>
 <%if (currentUser.profilePicture) { %>
 <div class="profilepic">
@@ -11,16 +8,25 @@
 </div>
 <% } %>
 <h1><%= currentUser.firstName%> <%= currentUser.lastName%></h1>
-<p><%= currentUser.userName%></p>
+<a href="mailto:<%= currentUser.userName%>"><%= currentUser.userName%></a>
+<h2>My genres</h2>
 <%if(currentUser.genres !== 'undefined'){%>
-    <%currentUser.genres.forEach(function(elem){%>
-    <li><%= elem _%></li>
-    <%})%>
+    <ul class="my-genres">
+        <%currentUser.genres.forEach(function(elem){%>
+            <li><%= elem _%></li>
+        <%})%>
+    </ul>
 <%}%>
 <h2>Description</h2>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
 Aenean commodo ligula eget dolor. Aenean massa. </p>
-
+<a class="update-btn" href="/update">Update your profile</a>
+<form method="get" action="/signout">
+    <button>Logout</button>
+</form>
+<form action="/users/delete" method="get">
+    <button class="deleteProfile" type="submit">Delete account</button>
+</form>
 </main>
 <% include partials/footer %>
 

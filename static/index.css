@@ -1,4 +1,4 @@
-body{
+/* body{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -98,8 +98,8 @@ img{
 *========================================================================================
 */
 
-@media (min-width: 333px) {
+/* @media (min-width: 333px) {
     body{
         background-color: red;
     }
-}
+} */ 
