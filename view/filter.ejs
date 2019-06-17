@@ -1,0 +1,16 @@
+  <% include partials/header %>
+    <form action="/filter" method="post">
+        <input type="checkbox" name="genre" value="Jazz">
+        <label for="Jazz">Jazz</label>
+        <input type="checkbox" name="genre" value="Hip hop">
+        <label for="Hip hop">Hip hop</label>
+        <input type="checkbox" name="genre" value="Pop">
+        <label for="Pop">Pop</label>
+        <input type="checkbox" name="genre" value="Rock">
+        <label for="Rock">Rock</label>
+
+        <input type="submit" name="submit" value="filter">
+    </form>
+
+
+<% include partials/footer %>
