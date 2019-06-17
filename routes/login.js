@@ -46,7 +46,7 @@ router.post('/', function (req, res) {
             bcryptjs.compare(password, user.password, function (err, user) {
     
             console.log("login succesful")
-            res.redirect("/dashboard")
+            res.redirect("/")
             return res.status(200).send()
           })
           req.session.user = user;

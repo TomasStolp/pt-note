@@ -16,6 +16,7 @@ var expressValidator = require('express-validator')
 // var bcryptjs = require("bcryptjs")
 
 // Routes
+var home = require("./routes/home.js")
 var dashboard = require("./routes/dashboard.js")
 var users = require("./routes/users-overview.js")
 var register = require("./routes/register.js")
@@ -26,11 +27,15 @@ var removeUser = require("./routes/remove-user.js")
 var profile = require("./routes/profile.js")
 var deleteUser = require("./routes/delete-user.js")
 
-const url = process.env.MONGODB_URI;
+// const url = process.env.MONGODB_URI;
 
 //Linking mongoose to MongoDB Database called "MotoMatch"
-mongoose.connect(url, {
-  useNewUrlParser: true 
+// mongoose.connect(url, {
+//   useNewUrlParser: true 
+// })
+
+mongoose.connect('mongodb://' + "localhost" + '/' + "MotoMatch", {
+  useNewUrlParser: true
 })
 
 express()
@@ -55,6 +60,7 @@ express()
 
   //Routes
   //https://www.youtube.com/watch?v=gnsO8-xJ8rs For help with routing and the basics of expressJS
+  .use("/", home)
   .use("/dashboard", dashboard)
   .use("/users", users)
   .use("/login", login)
@@ -67,6 +73,6 @@ express()
 
 
   //Listen on the defined port
-  .listen(process.env.PORT, function () {
+  .listen(3008, function () {
     console.log("Server listening on port 3008")
   })
