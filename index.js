@@ -33,7 +33,6 @@ mongoose.connect(url, {
   useNewUrlParser: true 
 })
 
-wefwefwef
 express()
   .use(express.static("static"))
   .use(bodyParser.urlencoded({
