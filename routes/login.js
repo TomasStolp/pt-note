@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var bcryptjs = require("bcryptjs")
-var User = require('../models/user.js');
+var User = require('../models/user.js')
 
 // Validation
 //Get "/login"
@@ -11,9 +11,10 @@ router.get('/', function(req, res) {
 
 //Post "/login"
 router.post('/', function (req, res) {
-
+  console.log(req.body.userName)
 
   function validate(req, res){
+    // console.log(req.body.userName)
 
     return new Promise(function(resolve, reject){
     // Validate
@@ -34,7 +35,7 @@ router.post('/', function (req, res) {
 }
 
     validate(req, res).then(function(){
-      var username = req.body.userName
+      var username = req.body.userName.toLowerCase()
       var password = req.body.password
 
       User.findOne({

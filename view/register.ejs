@@ -24,36 +24,34 @@
             <input id="profilePicture" type="file" name="profilePicture">
         </label>
 
-
         <section id="genres">
-        <label class="genres" for="pop">
-            <span>Pop</span>
-            <input type="checkbox" id="pop" value="pop" name="genres">
-        </label>
-        <label class="genres" for="rock">
-            <span>Rock</span>
-            <input type="checkbox" id="rock" value="rock" name="genres">
-        </label>
-        <label class="genres" for="dance">
-            <span>Dance</span>
-            <input type="checkbox" id="dance" value="dance" name="genres">
-        </label>
-        <label class="genres" for="jazz">
-            <span>Jazz</span>
-            <input type="checkbox" id="jazz" value="jazz" name="genres">
-        </label>
-        <label class="genres" for="reggae">
-            <span>Reggae</span>
-            <input type="checkbox" id="reggae" value="reggae" name="genres">
-        </label>
-        <label class="genres" for="metal">
-            <span>Metal</span>
-            <input type="checkbox" id="metal" value="metal" name="genres">
-        </label>
-    </section>
-
-        <a href="/login">back</a> 
-        <button type="submit" value="Submit">Register</button>
+          <label class="genres" for="pop">
+              <span>Pop</span>
+              <input type="checkbox" id="pop" value="pop" name="genres[]">
+          </label>
+          <label class="genres" for="rock">
+              <span>Rock</span>
+              <input type="checkbox" id="rock" value="rock" name="genres[]">
+          </label>
+          <label class="genres" for="dance">
+              <span>Dance</span>
+              <input type="checkbox" id="dance" value="dance" name="genres[]">
+          </label>
+          <label class="genres" for="jazz">
+              <span>Jazz</span>
+              <input type="checkbox" id="jazz" value="jazz" name="genres[]">
+          </label>
+          <label class="genres" for="reggae">
+              <span>Reggae</span>
+              <input type="checkbox" id="reggae" value="reggae" name="genres[]">
+          </label>
+          <label class="genres" for="metal">
+              <span>Metal</span>
+              <input type="checkbox" id="metal" value="metal" name="genres[]">
+          </label>
+      </section>
+      <a href="/login">back</a> 
+      <button type="submit" value="Submit">Register</button>
     </form>
 </main>
 <% include partials/footer %>
