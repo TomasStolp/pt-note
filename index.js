@@ -1,3 +1,5 @@
+
+require('dotenv').config()
 //setting package requirements
 var express = require("express")
 var session = require("express-session")
@@ -26,9 +28,11 @@ var deleteUser = require("./routes/delete-user.js")
 
 
 //Linking mongoose to MongoDB Database called "MotoMatch"
-mongoose.connect('mongodb://' + "localhost" + '/' + "MotoMatch", {
-  useNewUrlParser: true
-})
+// mongoose.connect('mongodb://' + "localhost" + '/' + "MotoMatch", {
+//   useNewUrlParser: true
+// })
+
+  const url = process.env.MONGODB_URI;
 
 express()
   .use(express.static("static"))
