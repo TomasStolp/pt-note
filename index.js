@@ -68,6 +68,6 @@ express()
 
 
   //Listen on the defined port
-  .listen(3008, function () {
+  .listen(process.env.PORT, function () {
     console.log("Server listening on port 3008")
   })
